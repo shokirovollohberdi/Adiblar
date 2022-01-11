@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:context=".AddAdibFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adib qo'shish"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:id="@+id/adibImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/edt_back"
+            app:layout_constraintBottom_toTopOf="@+id/cardAdibImage"
+            app:layout_constraintHeight_percent="0.16"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.5" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/cardAdibImage"
+            app:layout_constraintHeight_percent="0.16"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.5" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardAdibImage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00B238"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toTopOf="@id/edtAdib"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/adibImage"
+            app:layout_constraintWidth_percent="0.5">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Adib rasmlar"
+                android:textColor="@color/white" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <EditText
+            android:id="@+id/edtAdib"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edt_back"
+            android:gravity="start"
+            android:hint="Adib to'liq ismi"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@id/edtBirth"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardAdibImage"
+            app:layout_constraintWidth_percent="0.9" />
+
+        <EditText
+            android:id="@+id/edtBirth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edt_back"
+            android:gravity="start"
+            android:hint="Tug'ilgan yili"
+            android:inputType="date"
+            android:padding="15dp"
+            app:layout_constraintBottom_toTopOf="@id/edtDead"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtAdib"
+            app:layout_constraintWidth_percent="0.9" />
+
+        <EditText
+            android:id="@+id/edtDead"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edt_back"
+            android:gravity="start"
+            android:hint="Vafot etgan kun"
+            android:inputType="date"
+            android:padding="15dp"
+            app:layout_constraintBottom_toTopOf="@id/spinner"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtBirth"
+            app:layout_constraintWidth_percent="0.9" />
+
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edt_back"
+            android:padding="8dp"
+            app:layout_constraintBottom_toTopOf="@id/edtInfo"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtDead"
+            app:layout_constraintWidth_percent="0.9"
+            tools:listitem="@layout/item_spinner" />
+
+        <EditText
+            android:id="@+id/edtInfo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/edt_back"
+            android:gravity="start"
+            android:hint="Adib haqida"
+            android:padding="15dp"
+            app:layout_constraintBottom_toTopOf="@id/cardSave"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spinner"
+            app:layout_constraintWidth_percent="0.9" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardSave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00B238"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtInfo"
+            app:layout_constraintWidth_percent="0.5">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Saqlash"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

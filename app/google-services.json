@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1095187092028",
+    "project_id": "adiblar-homework",
+    "storage_bucket": "adiblar-homework.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1095187092028:android:c3b08de4e05fb197c2a939",
+        "android_client_info": {
+          "package_name": "uz.shokirov.adiblarhaqida"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1095187092028-kb6cppsl4282tjuijsth2a71tuevmd9s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFeJSVRPB1FOlt_lAhQTDFDi9dmPlPh9A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1095187092028-kb6cppsl4282tjuijsth2a71tuevmd9s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
